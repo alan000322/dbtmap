@@ -1,5 +1,5 @@
 var C_List = [
-  {
+    {
     course: "生理學",
     eng_course: "Physiology",
     year: "108-1.108-2",
@@ -13,8 +13,8 @@ var C_List = [
     cross_des: "神經生物",
     link: "",
     author: "fish"
-  },
-  {
+    },
+    {
     "course": "材料力學",
     eng_course: "mechanics_of_materials",
     year: "109-2",
@@ -28,8 +28,8 @@ var C_List = [
     cross_des: "材料系必修",
     link: "https://www.facebook.com/groups/2714680181981495",
     author: "chun"
-  },
-  {
+    },
+    {
     "course": "微生物學",
     eng_course: "microbiology",
     year: "107-1",
@@ -43,8 +43,8 @@ var C_List = [
     cross_des: "生物工程",
     link: "https://timetable.nycu.edu.tw/?r=main/crsoutline&Acy=107&Sem=1&CrsNo=1590&lang=zh-tw",
     author: "chiatzu"
-  },
-  {
+    },
+    {
     "course": "計算生物概論",
     eng_course: "ComputationalBiology",
     year: "107-1",
@@ -58,8 +58,8 @@ var C_List = [
     cross_des: "生物資訊/計算生物",
     link: "https://timetable.nycu.edu.tw/?r=main/crsoutline&Acy=107&Sem=1&CrsNo=1580&lang=zh-tw",
     author: "chiatzu"
-  },
-  {
+    },
+    {
     "course": "生物資訊程式設計",
     eng_course: "Bioinfoprogramming",
     year: "107-1",
@@ -73,8 +73,8 @@ var C_List = [
     cross_des: "生物資訊/計算生物",
     link: "https://timetable.nycu.edu.tw/?r=main/crsoutline&Acy=107&Sem=1&CrsNo=5700&lang=zh-tw",
     author: "chiatzu"
-  },
-  {
+    },
+    {
     "course": "生物統計",
     eng_course: "biostatistic",
     year: "108-1",
@@ -88,8 +88,8 @@ var C_List = [
     cross_des: "基礎學科",
     link: "https://timetable.nycu.edu.tw/?r=main/crsoutline&Acy=108&Sem=1&CrsNo=5713&lang=zh-tw",
     author: "chiatzu"
-  },
-  {
+    },
+    {
     "course": "計算生物實驗",
     eng_course: "ComputationalBiologyLab",
     year: "108-2",
@@ -103,5 +103,5 @@ var C_List = [
     cross_des: "生物資訊/計算生物",
     link: "https://timetable.nycu.edu.tw/?r=main/crsoutline&Acy=108&Sem=2&CrsNo=5698&lang=zh-tw",
     author: "chiatzu"
-  }
+    }
 ] //CourseList
