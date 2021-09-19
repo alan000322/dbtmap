@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <title>DBTMAP</title>
+    <script src="https://unpkg.com/vue@next"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">DBTMAP</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="#">跨域心得</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="#">推甄心得</a>
+                </li>
+            </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id='app'>
+        <div class="container mt-4">
+            <div class="row justify-content-center">
+                <div class="col-lg-9 mt-4" @click>
+                    <input class="form-control" type="text" placeholder="輸入課程搜尋" v-model="q"> 
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-9 pt-2 mb-4" @click>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" id="switchDBT" checked v-model="c_dbt">
+                        <label class="form-check-label" for="switchDBT">生科院課程</label>
+                      </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-9" v-for="courseitem in filterCourseList">
+                    <div class="card my-2">
+                        <div class="card-body">
+                            <h4 class="card-title">{{courseitem.course}}</h4>
+                            <span class="badge bg-success">{{courseitem.cross_des}}</span>
+                            <h6 class="card-subtitle my-2 text-muted">{{courseitem.year}}</h6>
+                            <p class="card-text">
+                                <b>適合修課對象: </b>
+                                <br>
+                                {{courseitem.proper_des}}
+                            </p>
+                            <p class="card-text">
+                                <b>授課老師: </b>{{courseitem.teacher}}
+                            </p>
+                            <p class="card-text">
+                                <b>上課方式: </b>
+                                <br>
+                                <p v-html="courseitem.intheclass"></p>
+                            </p>
+                            <p class="card-text">
+                                <b>任何想說的: </b>
+                                <br>
+                                <p v-html="courseitem.info"></p>
+                            </p>
+                            <p class="card-text">
+                                <b>未來修課方向/應用: </b>
+                                <br>
+                                {{courseitem.futurework}}
+                            </p>
+                            <p class="card-text">
+                                <b>評分: </b>
+                                <br>
+                                {{courseitem.score_des}}
+                            </p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="#" class="card-link text-secondary text-decoration-none">課程綱要</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row py-3">
+                <h5 class="text-center"> 共有 {{filterCourseList.length}} 筆資料</h5>
+            </div>
+            
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+    <script src="data.js"></script>
+    <script src="map.js"></script>
+
+</body>
+</html>
