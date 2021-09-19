@@ -19,7 +19,7 @@ Vue.createApp({
             if (query != '') { return this.CourseList.filter((item) => 
                 item.course.indexOf(query)  != -1 || 
                 item.teacher.indexOf(query) != -1 || 
-                item.des.indexOf(query) !=-1
+                item.intheclass.indexOf(query) !=-1
                 )}
             if (this.c_dbt == true) { return this.CourseList.filter((item) => item.Dtag == "DBT") }
             else { return this.CourseList }
