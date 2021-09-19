@@ -1,4 +1,4 @@
-var C_List = [
+C_List = [
     {
         course: '結構生物資訊',
         eng_course: 'strubioinfo',
