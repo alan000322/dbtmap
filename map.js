@@ -5,7 +5,7 @@ Vue.createApp({
             courseFilter: 'all',
             q: '',
             c_dbt: 'false',
-            CourseList:  C_List,
+            CourseList:  parse(JSON.stringify(C_List)),
 
 
         }
